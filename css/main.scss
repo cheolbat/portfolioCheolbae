@@ -59,6 +59,44 @@
     height: 100vh;
   }
 
+  .btn {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 5px;
+
+    a {
+      display: block;
+      padding: 10px 0;
+
+      .line {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 1px;
+        background: #333;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+    }
+  }
+  .btn:hover {
+    border: 1px solid #fadd0a;
+
+    a {
+      color: #fadd0a;
+
+      .line {
+        background: #fadd0a;
+      }
+    }
+  }
+  .btn-lately-pj {
+    width: 200px;
+  }
+
   .a11y-hidden {
     overflow: hidden;
     position: absolute;
@@ -363,6 +401,10 @@
         position: absolute;
         opacity: 0;
         z-index: 10;
+
+        p {
+          text-align: center;
+        }
       }
 
       .project-item:nth-child(1) {
@@ -420,6 +462,27 @@
       .pj-background-word:nth-child(3) {
         right: -10px;
         top: 850px;
+      }
+
+      .lately-project {
+        width: 100%;
+        height: 1000px;
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        .mockup-img {
+          width: 300px;
+          height: 100%;
+          background-image: url(../src/mobile-mockup.png);
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+        }
       }
     }
 
@@ -547,43 +610,10 @@
           margin-top: 20px;
         }
       }
-
-      .btn-recruit {
-        width: 100%;
-        height: auto;
-        margin-top: 40px;
-        text-align: center;
-        border: 1px solid #333;
-        border-radius: 5px;
-        a {
-          display: block;
-          padding: 10px 0;
-          .line {
-            content: "";
-            display: inline-block;
-            width: 40px;
-            height: 1px;
-            background: #333;
-            vertical-align: middle;
-            margin-left: 10px;
-          }
-        }
-      }
-      .btn-recruit:hover {
-        border: 1px solid #fadd0a;
-        a {
-          color: #fadd0a;
-          .line{
-            background: #fadd0a;
-          }
-        }
-      }
-
     }
-
     .contact {
       width: 100%;
-      height: auto;
+      height: 100vh;
       background: #fafafa;
 
 
@@ -593,6 +623,10 @@
         margin: 0 auto;
         padding: 100px 0;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       .contact-title {
@@ -641,16 +675,46 @@
           animation: bounce .4s ease infinite alternate;
           color: #999;
         }
-        span:nth-child(2) { animation-delay: .1s; }
-        span:nth-child(3) { animation-delay: .2s; }
-        span:nth-child(4) { animation-delay: .3s; }
-        span:nth-child(5) { animation-delay: .4s; }
-        span:nth-child(6) { animation-delay: .5s; }
-        span:nth-child(7) { animation-delay: .6s; }
-        span:nth-child(8) { animation-delay: .7s; }
-        span:nth-child(9) { animation-delay: .8s; }
-        span:nth-child(10) { animation-delay: .9s; }
-        span:nth-child(11) { animation-delay: 1.0s; }
+
+        span:nth-child(2) {
+          animation-delay: .1s;
+        }
+
+        span:nth-child(3) {
+          animation-delay: .2s;
+        }
+
+        span:nth-child(4) {
+          animation-delay: .3s;
+        }
+
+        span:nth-child(5) {
+          animation-delay: .4s;
+        }
+
+        span:nth-child(6) {
+          animation-delay: .5s;
+        }
+
+        span:nth-child(7) {
+          animation-delay: .6s;
+        }
+
+        span:nth-child(8) {
+          animation-delay: .7s;
+        }
+
+        span:nth-child(9) {
+          animation-delay: .8s;
+        }
+
+        span:nth-child(10) {
+          animation-delay: .9s;
+        }
+
+        span:nth-child(11) {
+          animation-delay: 1.0s;
+        }
       }
     }
 
@@ -735,6 +799,7 @@
     }
 
     .recruit {
+      height: 100vh;
       .recruit-title {
         font-size: 5rem;
       }
@@ -751,7 +816,7 @@
 
     .contact {
       width: 100%;
-      height: auto;
+      height: 100vh;
       background: #fafafa;
 
       .contact-inner {
@@ -763,7 +828,7 @@
       }
 
       .contact-title {
-        font-size: 1.2rem;
+        font-size: #{$font-medium};
         position: relative;
         display: inline-block;
         margin-bottom: 30px;
@@ -781,7 +846,7 @@
       }
 
       .contact-email {
-        font-size: #{$font-large};
+        font-size: #{$font-xlarge};
       }
     }
   }
@@ -868,12 +933,13 @@
         height: 210px;
         background: #dfdfdf;
       }
+
       .btn-recruit {
         position: absolute;
         width: 300px;
         left: 49.6%;
       }
     }
-    
+
   }
 }
