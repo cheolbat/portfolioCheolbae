@@ -398,6 +398,9 @@
     background-repeat: no-repeat;
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
   }
+  .container .projects .lately-project .lt-project-desc {
+    text-align: center;
+  }
   .container .posting {
     width: 100%;
     height: auto;
